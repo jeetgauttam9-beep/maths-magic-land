@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Fredoka', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom 3D Cartoon Button styles */
+.btn-3d {
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 0 0 rgba(0, 0, 0, 0.2), 0 8px 16px -2px rgba(0, 0, 0, 0.15);
+}
+
+.btn-3d:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 0 0 rgba(0, 0, 0, 0.2), 0 12px 20px -2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-3d:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2), 0 4px 8px -1px rgba(0, 0, 0, 0.15);
+}
+
+/* Specific 3D shadows for colors */
+.btn-3d-orange {
+  box-shadow: 0 6px 0 0 #c2410c, 0 10px 20px -3px rgba(234, 88, 12, 0.4);
+}
+.btn-3d-orange:hover {
+  box-shadow: 0 8px 0 0 #c2410c, 0 14px 24px -3px rgba(234, 88, 12, 0.5);
+}
+.btn-3d-orange:active {
+  box-shadow: 0 2px 0 0 #c2410c, 0 4px 10px -2px rgba(234, 88, 12, 0.4);
+}
+
+.btn-3d-amber {
+  box-shadow: 0 6px 0 0 #b45309, 0 10px 20px -3px rgba(217, 119, 6, 0.4);
+}
+.btn-3d-amber:hover {
+  box-shadow: 0 8px 0 0 #b45309, 0 14px 24px -3px rgba(217, 119, 6, 0.5);
+}
+.btn-3d-amber:active {
+  box-shadow: 0 2px 0 0 #b45309, 0 4px 10px -2px rgba(217, 119, 6, 0.4);
+}
+
+.btn-3d-sky {
+  box-shadow: 0 6px 0 0 #0369a1, 0 10px 20px -3px rgba(2, 132, 199, 0.4);
+}
+.btn-3d-sky:hover {
+  box-shadow: 0 8px 0 0 #0369a1, 0 14px 24px -3px rgba(2, 132, 199, 0.5);
+}
+.btn-3d-sky:active {
+  box-shadow: 0 2px 0 0 #0369a1, 0 4px 10px -2px rgba(2, 132, 199, 0.4);
+}
+
+.btn-3d-emerald {
+  box-shadow: 0 6px 0 0 #047857, 0 10px 20px -3px rgba(5, 150, 105, 0.4);
+}
+.btn-3d-emerald:hover {
+  box-shadow: 0 8px 0 0 #047857, 0 14px 24px -3px rgba(5, 150, 105, 0.5);
+}
+.btn-3d-emerald:active {
+  box-shadow: 0 2px 0 0 #047857, 0 4px 10px -2px rgba(5, 150, 105, 0.4);
+}
+
+.btn-3d-rose {
+  box-shadow: 0 6px 0 0 #be123c, 0 10px 20px -3px rgba(225, 29, 72, 0.4);
+}
+.btn-3d-rose:hover {
+  box-shadow: 0 8px 0 0 #be123c, 0 14px 24px -3px rgba(225, 29, 72, 0.5);
+}
+.btn-3d-rose:active {
+  box-shadow: 0 2px 0 0 #be123c, 0 4px 10px -2px rgba(225, 29, 72, 0.4);
+}
+
+.btn-3d-indigo {
+  box-shadow: 0 6px 0 0 #4338ca, 0 10px 20px -3px rgba(79, 70, 229, 0.4);
+}
+.btn-3d-indigo:hover {
+  box-shadow: 0 8px 0 0 #4338ca, 0 14px 24px -3px rgba(79, 70, 229, 0.5);
+}
+.btn-3d-indigo:active {
+  box-shadow: 0 2px 0 0 #4338ca, 0 4px 10px -2px rgba(79, 70, 229, 0.4);
+}
+
+/* Float animations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+@keyframes cloudDrift {
+  0% { transform: translateX(-5%); }
+  50% { transform: translateX(5%); }
+  100% { transform: translateX(-5%); }
+}
+
+.animate-cloud-drift {
+  animation: cloudDrift 16s ease-in-out infinite;
+}
+
+@keyframes pulseAura {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.08); opacity: 1; }
+}
+
+.animate-pulse-aura {
+  animation: pulseAura 3s ease-in-out infinite;
+}
+
+/* Dynamic Answer Reaction Animations for Little Hanuman */
+@keyframes hanumanVictoryJump {
+  0% { transform: translateY(0px) scale(1, 1); }
+  25% { transform: translateY(-30px) scale(1.08, 0.94) rotate(-3deg); }
+  50% { transform: translateY(-10px) scale(0.96, 1.04) rotate(2deg); }
+  75% { transform: translateY(-24px) scale(1.05, 0.96) rotate(-1deg); }
+  100% { transform: translateY(0px) scale(1, 1); }
+}
+
+.animate-hanuman-jump {
+  animation: hanumanVictoryJump 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+}
+
+@keyframes gadaWhirlwind {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-gada-spin-fast {
+  animation: gadaWhirlwind 0.55s linear infinite;
+}
+
+@keyframes sunburstSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-sunburst-spin {
+  animation: sunburstSpin 10s linear infinite;
+}
+
+@keyframes gentleNodComfort {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(-2deg); }
+}
+
+.animate-gentle-nod {
+  animation: gentleNodComfort 2s ease-in-out infinite;
+}
+
+@keyframes laddooPop {
+  0% { transform: scale(0) translateY(10px); opacity: 0; }
+  50% { transform: scale(1.2) translateY(-15px); opacity: 1; }
+  100% { transform: scale(1) translateY(-25px); opacity: 0.85; }
+}
+
+.animate-laddoo-pop {
+  animation: laddooPop 1.5s ease-out forwards;
+}
+

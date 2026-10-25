@@ -1,0 +1,6 @@
+{
+  "name": "Bal Hanuman Math Magic Land",
+  "description": "An interactive, animated math adventure game for kids in Classes 1 to 3 guided by Little Hanuman ji with Hinglish encouragement.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
